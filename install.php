@@ -3,6 +3,8 @@
 
 require 'conexion.php';
 
+$command = "mysql --host=$host --user=$user --password=$password $database < changelog.sql";
+system($command);
 $command = "mysql --host=$host --user=$user --password=$password $database < baseline.sql";
 system($command);
 
